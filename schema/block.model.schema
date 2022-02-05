@@ -15,7 +15,7 @@
     "title": {
       "type": "string",
       "required": true,
-      "default": "New Block Title",
+      "default": "Tytuł nowego bloku",
       "inputType": "Text",
       "validators": ["required"],
       "translatable": true
@@ -23,10 +23,10 @@
     "displayTitle": {
       "type": "string",
       "required": false,
-      "default": "",
+      "default": "Tytuł nowego bloku",
       "inputType": "DisplayTitle",
       "validators": [],
-      "help": "When viewing a block - this is the title that will be displayed on the page",
+      "help": "Podczas przeglądania bloku - jest to tytuł, który będzie wyświetlany na stronie",
       "translatable": true
     },
     "body":{
@@ -39,7 +39,7 @@
     "instruction": {
       "type": "string",
       "required": false,
-      "title": "Instruction text",
+      "title": "Tekst instrukcji",
       "default": "",
       "inputType": "Text",
       "validators": [],
@@ -51,8 +51,8 @@
       "isSetting": true,
       "inputType": "Text",
       "validators": [],
-      "title": "Classes",
-      "help": "Used to style or manipulate the look and feel of this Block. These are predefined in the theme or added in Project Settings > Custom CSS/Less code."
+      "title": "Klasy",
+      "help": "Używane do stylizacji lub manipulacji wyglądem i działaniem tego bloku. Są one predefiniowane w motywie lub dodane w Ustawieniach projektu > Własny CSS/Less code."
     },
     "_isOptional": {
       "type": "boolean",
@@ -60,8 +60,8 @@
       "isSetting": true,
       "inputType": "Checkbox",
       "validators": [],
-      "title": "Is this optional?",
-      "help": "An optional block does not have to be completed, nor do any of the components contained within it."
+      "title": "Opcjonalny?",
+      "help": "Blok opcjonalny nie musi być wypełniony, ani żaden z komponentów w nim zawartych."
     },
     "_isAvailable": {
       "type": "boolean",
@@ -69,8 +69,8 @@
       "isSetting": true,
       "inputType": "Checkbox",
       "validators": [],
-      "title": "Is this available?",
-      "help": "Controls whether this block and its contents are available in the course or not."
+      "title": "Istnieje?",
+      "help": "Kontroluje, czy ten blok i jego zawartość są dostępne w kursie, czy nie."
     },
     "_isHidden": {
       "type": "boolean",
@@ -78,8 +78,8 @@
       "isSetting": true,
       "inputType": "Checkbox",
       "validators": [],
-      "title": "Is this hidden?",
-      "help": "Enabling this is equivalent to applying the CSS 'display:none' to the block."
+      "title": "Ukryć?",
+      "help": "Włączenie tego jest równoznaczne z zastosowaniem CSS 'display:none' do bloku."
     },
     "_isVisible": {
       "type": "boolean",
@@ -87,8 +87,8 @@
       "isSetting": true,
       "inputType": "Checkbox",
       "validators": [],
-      "title": "Is this visible?",
-      "help": "Disabling this is equivalent to applying the CSS 'visibility:hidden' to the block."
+      "title": "Widoczny?",
+      "help": "Wyłączenie tego jest równoznaczne z zastosowaniem CSS 'visibility:hidden' do bloku."
     },
     "_requireCompletionOf": {
       "type": "number",
@@ -96,8 +96,8 @@
       "isSetting": true,
       "inputType": "Number",
       "validators": ["number"],
-      "title": "Require completion of",
-      "help": "The number of components within this block the learner must complete in order for this block to be set as completed. A value of -1 requires all of them to be completed."
+      "title": "Wymóg ukończenia",
+      "help": "Liczba komponentów w ramach tego bloku, które uczący się musi ukończyć, aby blok ten został uznany za ukończony. Wartość -1 wymaga, aby wszystkie zostały ukończone."
     },
     "_ariaLevel": {
       "type": "number",
@@ -105,12 +105,12 @@
       "isSetting": true,
       "inputType": "Number",
       "validators": ["number"],
-      "help": "If you need to override the default block ARIA level (as defined in Configuration Settings), set this to any number greater than 0."
+      "help": "Jeśli chcesz zastąpić domyślny poziom ARIA bloku (zdefiniowany w Ustawieniach konfiguracji), ustaw tę wartość na dowolną liczbę większą niż 0."
     },
     "_onScreen": {
       "type": "object",
-      "title": "On-screen classes",
-      "help": "These settings allow you to attach classes to the block when it is within the browser's viewport; helpful for running CSS-based animations on blocks as they scroll into view.",
+      "title": "Klasy On-screen",
+      "help": "Te ustawienia pozwalają na dołączenie klas do bloku, gdy znajduje się on w rzutni przeglądarki; jest to pomocne przy uruchamianiu animacji opartych na CSS na blokach, gdy przewijają się one do widoku.",
       "properties": {
         "_isEnabled": {
           "type": "boolean",
@@ -118,7 +118,7 @@
           "isSetting": true,
           "inputType": "Checkbox",
           "validators": [],
-          "title": "Enabled?"
+          "title": "Włączyć?"
         },
         "_classes": {
           "type": "string",
@@ -127,18 +127,18 @@
           "required": false,
           "inputType": "Text",
           "validators": [],
-          "title": "Classes",
-          "help": "The CSS class(es) to add to the block element."
+          "title": "Klasy",
+          "help": "Klasa(y) CSS, którą(e) należy dodać do elementu bloku."
         },
         "_percentInviewVertical": {
           "type": "number",
           "required": false,
           "default": 50,
           "isSetting": true,
-          "title": "Percent in view",
+          "title": "Procent w zasięgu wzroku",
           "inputType": "Number",
           "validators": ["number"],
-          "help": "Controls what percentage of the block's height needs to be in the viewport in order for the CSS class(es) to be added."
+          "help": "Określa, jaki procent wysokości bloku musi znajdować się w rzutni, aby klasa(y) CSS została(y) dodana(e)."
         }
       }
     },

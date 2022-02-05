@@ -10,12 +10,12 @@
       "properties": {
         "_trackingId": {
           "type": "number",
-          "title": "Tracking id",
+          "title": "Id śledzenia",
           "default": 0
         },
         "layoutOptions": {
           "type": "array",
-          "title": "Layout options",
+          "title": "Opcje układu",
           "default": [],
           "_adapt": {
             "editorOnly": true
@@ -23,8 +23,8 @@
         },
         "_requireCompletionOf": {
           "type": "number",
-          "title": "Number of components required for completion",
-          "description": "The number of components within this block the learner must complete in order for this block to be set as completed. A value of -1 requires all of them to be completed",
+          "title": "Liczba elementów wymaganych do ukończenia",
+          "description": "Liczba komponentów w ramach tego bloku, które uczący się musi ukończyć, aby ten blok został uznany za ukończony. Wartość -1 wymaga, aby wszystkie zostały ukończone.",
           "default": -1,
           "_adapt": {
             "isSetting": true

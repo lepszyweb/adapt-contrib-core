@@ -10,8 +10,8 @@
       "properties": {
         "_requireCompletionOf": {
           "type": "number",
-          "title": "Number of blocks required for completion",
-          "description": "The number of blocks within this article the learner must complete in order for this article to be set as completed. A value of -1 requires all of them to be completed",
+          "title": "Liczba bloków wymaganych do ukończenia",
+          "description": "Liczba bloków w ramach tego artykułu, które uczący się musi ukończyć, aby ten artykuł został ustawiony jako ukończony. Wartość -1 wymaga, aby wszystkie zostały ukończone.",
           "default": -1,
           "_adapt": {
             "isSetting": true

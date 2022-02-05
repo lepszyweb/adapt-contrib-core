@@ -22,8 +22,8 @@
         },
         "_isResetOnRevisit": {
           "type": "string",
-          "title": "Reset state on revisit",
-          "description": "Controls whether this component will be reset when the learner leaves the page then returns to it. The 'soft' setting will reset the component to allow the learner to attempt it again, but will not require them to do so; whereas the 'hard' setting will require them to do so. The default (false) will not cause the component to be reset",
+          "title": "Wyzeruj stan przy ponownej wizycie",
+          "description": "Określa, czy komponent będzie resetowany, gdy uczący się opuści stronę, a następnie powróci na nią. Ustawienie 'miękkie' zresetuje komponent, aby umożliwić uczącemu się ponowne podejście do niego, ale nie będzie od niego tego wymagać, natomiast ustawienie 'twarde' będzie od niego wymagać. Ustawienie domyślne (false) nie spowoduje zresetowania komponentu.",
           "default": "false",
           "enum": [
             "false",
@@ -37,8 +37,8 @@
         },
         "_disableAccessibilityState": {
           "type": "boolean",
-          "title": "Disable completion ARIA label",
-          "description": "Controls whether the user can tab to a hidden label that describes the completion state of the component",
+          "title": "Wyłączenie zakończenia ARIA label",
+          "description": "Kontroluje, czy użytkownik może przejść do ukrytej etykiety opisującej stan zakończenia komponentu.",
           "default": false,
           "_adapt": {
             "isSetting": true
@@ -46,7 +46,7 @@
         },
         "properties": {
           "type": "object",
-          "title": "Properties",
+          "title": "Właściwości",
           "default": {}
         }
       }
