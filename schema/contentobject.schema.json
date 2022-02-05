@@ -13,8 +13,8 @@
       "properties": {
         "subtitle": {
           "type": "string",
-          "title": "Subtitle",
-          "description": "When viewing a menu/page - this is the subtitle that will be displayed on the menu/page",
+          "title": "Podtytuł",
+          "description": "Podczas wyświetlania menu/strony - jest to napis, który będzie wyświetlany w menu/stronie",
           "default": "",
           "_adapt": {
             "translatable": true
@@ -22,8 +22,8 @@
         },
         "pageBody": {
           "type": "string",
-          "title": "Custom page body",
-          "description": "If set, this text will be shown instead of the body text when this page is viewed",
+          "title": "Własne ciało strony",
+          "description": "Jeśli ustawione, ten tekst będzie wyświetlany zamiast tekstu głównego, gdy ta strona jest przeglądana",
           "default": "",
           "_adapt": {
             "translatable": true
@@ -32,8 +32,8 @@
         },
         "_htmlClasses": {
           "type": "string",
-          "title": "Custom HTML classes",
-          "description": "If set, this CSS class/es will be applied to the <html> element whenever this is the active page in the course. These are predefined in the theme or added in Project Settings > Custom CSS/Less code",
+          "title": "Własne klasy HTML",
+          "description": "Jeśli jest ustawiona, ta klasa/e CSS będzie stosowana do elementu <html> za każdym razem, gdy będzie to aktywna strona w kursie. Są one predefiniowane w motywie lub dodane w Ustawieniach projektu > Własny CSS/Less code",
           "default": ""
         },
         "_graphic": {
@@ -43,8 +43,8 @@
           "properties": {
             "alt": {
               "type": "string",
-              "title": "Alternative text",
-              "description": "A description of the image; required when it has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank",
+              "title": "Tekst alternatywny",
+              "description": "Opis obrazka; wymagany, gdy ma on znaczenie, które musi być przekazane uczącemu się. W przypadku obrazów 'dekoracyjnych' należy pozostawić to pole puste",
               "default": "",
               "_adapt": {
                 "translatable": true
@@ -53,7 +53,7 @@
             "src": {
               "type": "string",
               "isObjectId": true,
-              "title": "Source",
+              "title": "Źródło",
               "_backboneForms": {
                 "type": "Asset",
                 "media": "image"
@@ -63,16 +63,16 @@
         },
         "linkText": {
           "type": "string",
-          "title": "Menu button text",
-          "default": "View",
+          "title": "Tekst przycisku menu",
+          "default": "Zobacz",
           "_adapt": {
             "translatable": true
           }
         },
         "duration": {
           "type": "string",
-          "title": "Duration",
-          "description": "Indicates how long this page or section should take to complete",
+          "title": "Czas trwania",
+          "description": "Wskazuje, jak długo powinna trwać realizacja tej strony lub sekcji",
           "default": "",
           "_adapt": {
             "translatable": true
@@ -80,15 +80,15 @@
         },
         "_lockedBy": {
           "type": "array",
-          "title": "Elements to complete before this is unlocked",
-          "description": "If the course is using a 'custom' menu lock type, this should contain the unique ID of the item(s) which must be completed before this is unlocked",
+          "title": "Elementy do wykonania zanim zostanie odblokowany",
+          "description": "Jeśli kurs korzysta z 'niestandardowego' typu blokady menu, powinien on zawierać unikalny identyfikator elementu(ów), który musi zostać wypełniony przed jego odblokowaniem",
           "default": [],
           "_backboneForms": "List"
         },
         "_lockType": {
           "type": "string",
-          "title": "Menu lock type",
-          "description": "Defines which (if any) locking mechanism will be used. To be used only on submenus",
+          "title": "Typ blokady menu",
+          "description": "Określa, który (jeśli w ogóle) mechanizm blokujący zostanie użyty. Stosowane tylko w podmenu",
           "default": "",
           "enum": [
             "",
@@ -101,8 +101,8 @@
         },
         "_requireCompletionOf": {
           "type": "number",
-          "title": "Number of articles required for completion",
-          "description": "The number of articles within this page the learner must complete in order for this page to be set as completed. A value of -1 requires all of them to be completed",
+          "title": "Liczba artykułów wymaganych do ukończenia",
+          "description": "Liczba artykułów w ramach tej strony, które uczeń musi ukończyć, aby strona została uznana za ukończoną. Wartość -1 wymaga, aby wszystkie zostały ukończone.",
           "default": -1,
           "_adapt": {
             "isSetting": true

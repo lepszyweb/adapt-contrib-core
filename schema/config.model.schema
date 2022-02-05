@@ -30,7 +30,7 @@
           "default": true,
           "inputType": "Checkbox",
           "validators": [],
-          "title": "Wymóg kończenia treści",
+          "title": "Wymagaj ukończenia wszystkich treści kursu",
           "help": "Określa, że wszystkie treści kursu muszą zostać ukończone."
         },
         "_requireAssessmentCompleted": {
@@ -38,8 +38,8 @@
           "default": false,
           "inputType": "Checkbox",
           "validators": [],
-          "title": "Wymóg ukończenia oceny",
-          "help": "Określa, że wszystkie oceny w kursie muszą zostać ukończone."
+          "title": "Wymagaj uzyskania wszystkich ocen",
+          "help": "Określa, że wszystkie oceny w kursie muszą zostać uzyskane."
         }
       }
     },
@@ -74,15 +74,15 @@
           "default": true,
           "inputType": "Checkbox",
           "validators": [],
-          "title": "Włącz funkcje dostępności?"
+          "title": "Włącz funkcje dostępności"
         },
         "_isSkipNavigationEnabled": {
           "type": "boolean",
           "default": true,
           "inputType": "Checkbox",
           "validators": [],
-          "title": "Włącz link Pomiń nawigację?",
-          "help": "Dodaje łącze na początku strony, aby umożliwić użytkownikom technologii wspomagających pominięcie nawigacji i przejście bezpośrednio do treści strony."
+          "title": "Włącz link Pomiń nawigację",
+          "help": "Dodaje na początku strony łącze, aby umożliwić użytkownikom technologii wspomagających pominięcie nawigacji i przejście bezpośrednio do treści strony."
         },
         "_ariaLevels": {
           "type": "object",
@@ -93,7 +93,7 @@
               "type": "number",
               "required": true,
               "default": 1,
-              "title": "ARIA level elementu Menu",
+              "title": "Poziom ARIA elementu menu",
               "inputType": "Number",
               "validators": ["required", "number"]
             },
@@ -101,7 +101,7 @@
               "type": "number",
               "required": true,
               "default": 2,
-              "title": "ARIA level grupy elementów Menu",
+              "title": "Poziom ARIA grupy elementów menu",
               "inputType": "Number",
               "validators": ["required", "number"]
             },
@@ -109,16 +109,16 @@
               "type": "number",
               "required": true,
               "default": 2,
-              "title": "ARIA level pozycji Menu",
+              "title": "Poziom ARIA pozycji menu",
               "inputType": "Number",
               "validators": ["required", "number"],
-              "help": "Poziom ARIA elementu pozycji menu należy zmienić na 3, jeśli używane są grupy menu i wymagana jest obsługa A11Y."
+              "help": "Wartość atrybutu aria-level elementu pozycji menu należy zmienić na 3, jeśli używane są grupy menu i wymagana jest obsługa A11Y."
             },
             "_page": {
               "type": "number",
               "required": true,
               "default": 1,
-              "title": "ARIA level elementu strony",
+              "title": "Poziom ARIA elementu strony",
               "inputType": "Number",
               "validators": ["required", "number"]
             },
@@ -126,7 +126,7 @@
               "type": "number",
               "required": true,
               "default": 2,
-              "title": "ARIA level elementu artykułu",
+              "title": "Poziom ARIA elementu artykułu",
               "inputType": "Number",
               "validators": ["required", "number"]
             },
@@ -134,7 +134,7 @@
               "type": "number",
               "required": true,
               "default": 3,
-              "title": "ARIA level elementu bloku",
+              "title": "Poziom ARIA elementu bloku",
               "inputType": "Number",
               "validators": ["required", "number"]
             },
@@ -142,7 +142,7 @@
               "type": "number",
               "required": true,
               "default": 4,
-              "title": "ARIA level elementu komponentu",
+              "title": "Poziom ARIA elementu komponentu",
               "inputType": "Number",
               "validators": ["required", "number"]
             },
@@ -150,7 +150,7 @@
               "type": "number",
               "required": true,
               "default": 5,
-              "title": "ARIA level pozycji elementu komponentu",
+              "title": "Poziom ARIA pozycji elementu komponentu",
               "inputType": "Number",
               "validators": ["required", "number"]
             },
@@ -158,7 +158,7 @@
               "type": "number",
               "required": true,
               "default": 1,
-              "title": "ARIA level powiadamienia o tytule wyskakującego okienka",
+              "title": "Poziom ARIA powiadamienia o tytule wyskakującego okienka",
               "inputType": "Number",
               "validators": ["required", "number"]
             }
@@ -167,7 +167,7 @@
         "_options": {
           "type": "object",
           "default": {},
-          "title": "Rozszerzone opcje dostępności",
+          "title": "Opcje wzbogacone",
           "inputType": {
             "type": "CodeEditor",
             "mode": "json"
@@ -182,13 +182,13 @@
       "default": {
         "_imgLazyLoad": true
       },
-      "title": "Poprawki Rozszerzone opcje",
+      "title": "Różne poprawki",
       "inputType": {
         "type": "CodeEditor",
         "mode": "json"
       },
       "validators": [],
-      "help": "Opcjonalny obiekt, który może być użyty do dostosowania zastosowania poprawek"
+      "help": "Obiekt opcjonalny, którego można użyć do dostosowania aplikacji poprawek"
     },
     "screenSize": {
       "type": "object",
@@ -198,28 +198,28 @@
           "type": "number",
           "required": true,
           "default": 520,
-          "title": "Mały",
+          "title": "Małe",
           "inputType": "Number",
           "validators": ["required", "number"],
-          "help": "Szerokość w pikselach dla małego punktu przerwania, np. telefony komórkowe"
+          "help": "Szerokość w pikselach dla punktu przerwania małego wyświetlacza, np. telefony komórkowe"
         },
         "medium": {
           "type": "number",
           "required": true,
           "default": 760,
-          "title": "Średni",
+          "title": "Średnie",
           "inputType": "Number",
           "validators": ["required", "number"],
-          "help": "Szerokość w pikselach dla średniego punktu przerwania, np. urządzenia typu tablet"
+          "help": "Szerokość w pikselach dla punktu przerwania średniego wyświetlacza, np. urządzenia typu tablet"
         },
         "large": {
           "type": "number",
           "required": true,
           "default": 900,
-          "title": "Duży",
+          "title": "Duże",
           "inputType": "Number",
           "validators": ["required", "number"],
-          "help": "Szerokość w pikselach dla dużego punktu przerwania, np. laptopy / komputery stacjonarne"
+          "help": "Szerokość w pikselach dla punktu przerwania dużego wyświetlacza, np. laptopy/komputery stacjonarne"
         }
       }
     },
@@ -241,7 +241,7 @@
           "type": "string",
           "required": true,
           "default": "easeOutQuart",
-          "title": "Pokaż ułatwienia",
+          "title": "Funkcja łagodnego otwierania",
           "inputType": {
             "type": "Select",
             "options": [
@@ -283,7 +283,7 @@
           "type": "string",
           "required": true,
           "default": "easeInQuart",
-          "title": "Ukryj ułatwienia",
+          "title": "Funkcja łagodnego zamykania",
           "inputType": {
             "type": "Select",
             "options": [
@@ -337,7 +337,7 @@
       "isSetting": true,
       "inputType": "Checkbox",
       "validators": [],
-      "title": "Generuj mapy źródłowe?",
+      "title": "Generuj mapy źródłowe",
       "help": "Umożliwia debugowanie JavaScript i CSS kursu za pomocą narzędzi deweloperskich przeglądarki."
     },
     "_forceRouteLocking": {
@@ -346,13 +346,13 @@
       "isSetting": true,
       "inputType": "Checkbox",
       "validators": [],
-      "title": "Wymusić blokadę trasy?",
+      "title": "Wymuś blokadę trasy",
       "help": "Jeśli blokada jest włączona, ustawienie to uniemożliwia nawigację do zablokowanych tras."
     },
     "_disableAnimationFor": {
       "type": "array",
       "default": [],
-      "title": "Disable animation for",
+      "title": "Wyłącz animacje",
       "isSetting": true,
       "inputType": "List",
       "help": "Umożliwia wyłączenie niektórych animacji (np. animacji zamykania szuflady) na platformach, na których nie działają one dobrze, używając selektorów CSS, aby dopasować się do odpowiedniej platformy (platform) poprzez klasy elementu HTML."
@@ -367,7 +367,7 @@
           "required": true,
           "inputType": "Checkbox",
           "validators": [],
-          "title": "Włączyć?"
+          "title": "Włącz logowanie"
         },
         "_level": {
           "type": "string",
@@ -391,20 +391,20 @@
           "default": true,
           "inputType": "Checkbox",
           "validators": [],
-          "title": "Logować w konsoli przeglądarki?"
+          "title": "Loguj w konsoli przeglądarki"
         },
         "_warnFirstOnly": {
           "type": "boolean",
           "default": true,
           "inputType": "Checkbox",
           "validators": [],
-          "title": "Pokazać tylko pierwsze przestarzałe i usunięte ostrzeżenia?"
+          "title": "Wyeliminuj kolejne ostrzeżenia o deprecjacji"
         }
       }
     },
     "_scrollingContainer": {
       "type": "object",
-      "title": "Obsługa przewijania iFrame i Screen Reader",
+      "title": "Obsługa ramek wbudowanych",
       "properties" : {
         "_isEnabled": {
           "type": "boolean",
@@ -412,7 +412,7 @@
           "required": true,
           "inputType": "Checkbox",
           "validators": [],
-          "title": "Włączone?"
+          "title": "Włącz"
         },
         "_limitToSelector": {
           "type": "string",

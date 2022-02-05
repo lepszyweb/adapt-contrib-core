@@ -15,17 +15,17 @@
     },
     "_extensions": {
       "type": "object",
-      "title": "Extensions",
+      "title": "Rozszerzenia",
       "default": {}
     },
     "_enabledPlugins": {
       "type": "array",
-      "title": "Enabled plugins",
+      "title": "Włączone wtyczki",
       "default": []
     },
     "_theme": {
       "type": "string",
-      "title": "Theme",
+      "title": "Motyw",
       "default": "adapt-contrib-vanilla"
     },
     "_menu": {
@@ -36,39 +36,39 @@
     "_courseId": {
       "type": "string",
       "isObjectId": true,
-      "title": "Course id"
+      "title": "ID kursu"
     },
     "_completionCriteria": {
       "type": "object",
-      "title": "Completion criteria",
+      "title": "Kryteria zaliczenia",
       "default": {},
       "properties": {
         "_requireContentCompleted": {
           "type": "boolean",
-          "title": "Require all course content to be completed",
+          "title": "Wymagaj ukończenia wszystkich treści kursu",
           "default": true
         },
         "_requireAssessmentCompleted": {
           "type": "boolean",
-          "title": "Require all assessments to be completed",
+          "title": "Wymagaj uzyskania wszystkich ocen",
           "default": false
         },
         "_shouldSubmitScore": {
           "type": "boolean",
-          "title": "Submit score to LMS",
-          "description": "If enabled, the score attained in any assessment will be reported (regardless of whether the user passes or fails the assessment)",
+          "title": "Wyślij wynik do LMS",
+          "description": "Jeśli opcja ta jest włączona, wynik uzyskany w dowolnej ocenie będzie raportowany (niezależnie od tego, czy użytkownik zda, czy nie zda oceny)",
           "default": false
         }
       }
     },
     "_defaultLanguage": {
       "type": "string",
-      "title": "Default language code",
-      "default": "en"
+      "title": "Domyślny kod języka",
+      "default": "pl"
     },
     "_defaultDirection": {
       "type": "string",
-      "title": "Default text direction",
+      "title": "Kierunek tekstu",
       "default": "ltr",
       "enum": [
         "ltr",
@@ -78,24 +78,24 @@
     },
     "_accessibility": {
       "type": "object",
-      "title": "Accessibility",
+      "title": "Dostępność",
       "default": {},
       "properties": {
         "_isEnabled": {
           "type": "boolean",
-          "title": "Enable accessibility support",
+          "title": "Włącz funkcje dostępności",
           "default": true
         },
         "_isSkipNavigationEnabled": {
           "type": "boolean",
-          "title": "Add link to skip navigation",
-          "description": "Adds a link to the start of the page to allow assistive technology users to skip over the navigation and straight into to the page content",
+          "title": "Włącz link Pomiń nawigację",
+          "description": "Dodaje na początku strony łącze, aby umożliwić użytkownikom technologii wspomagających pominięcie nawigacji i przejście bezpośrednio do treści strony.",
           "default": true
         },
         "_ariaLevels": {
           "type": "object",
-          "title": "Default ARIA levels",
-          "description": "Defines what value to assign to the aria-level attribute for the various elements of Adapt",
+          "title": "Poziomy ARIA",
+          "description": "Określa, jaką wartość przypisać do atrybutu aria-level dla różnych elementów Adapt",
           "default": {},
           "required": [
             "_menu",
@@ -116,51 +116,51 @@
             },
             "_menuGroup": {
               "type": "number",
-              "title": "Menu group",
+              "title": "Grupa menu",
               "default": 2
             },
             "_menuItem": {
               "type": "number",
-              "title": "Menu item",
-              "description": "This will need to be changed to 3 if menu groups are being used and A11Y support is required",
+              "title": "Pozycja menu",
+              "description": "Wartość atrybutu aria-level elementu pozycji menu należy zmienić na 3, jeśli używane są grupy menu i wymagana jest obsługa A11Y.",
               "default": 2
             },
             "_page": {
               "type": "number",
-              "title": "Page",
+              "title": "Strona",
               "default": 1
             },
             "_article": {
               "type": "number",
-              "title": "Article",
+              "title": "Artykuł",
               "default": 2
             },
             "_block": {
               "type": "number",
-              "title": "Block",
+              "title": "Blok",
               "default": 3
             },
             "_component": {
               "type": "number",
-              "title": "Component",
+              "title": "Komponent",
               "default": 4
             },
             "_componentItem": {
               "type": "number",
-              "title": "Component item",
+              "title": "Element komponentu",
               "default": 5
             },
             "_notify": {
               "type": "number",
-              "title": "Notify popup title",
+              "title": "Tytuł okna wyskakującego",
               "default": 1
             }
           }
         },
         "_options": {
           "type": "object",
-          "title": "Advanced options",
-          "description": "Optional object that can be used to customize the accessibility behaviour",
+          "title": "Opcje wzbogacone",
+          "description": "Opcjonalny obiekt, który może być użyty do dostosowania zachowania dostępności.",
           "default": {},
           "_backboneForms": {
             "type": "CodeEditor",
@@ -171,8 +171,8 @@
     },
     "_fixes": {
       "type": "object",
-      "title": "Miscellaneous fixes",
-      "description": "Optional object that can be used to customize the application of fixes",
+      "title": "Różne poprawki",
+      "description": "Obiekt opcjonalny, którego można użyć do dostosowania aplikacji poprawek",
       "default": {
         "_imgLazyLoad": true
       },
@@ -183,7 +183,7 @@
     },
     "screenSize": {
       "type": "object",
-      "title": "Device breakpoints",
+      "title": "Rozmiar ekranu",
       "default": {},
       "required": [
         "small",
@@ -193,27 +193,27 @@
       "properties": {
         "small": {
           "type": "number",
-          "title": "Small",
-          "description": "Pixel width for the small breakpoint, e.g. cellphones",
+          "title": "Małe",
+          "description": "Szerokość w pikselach dla punktu przerwania małego wyświetlacza, np. telefony komórkowe",
           "default": 520
         },
         "medium": {
           "type": "number",
-          "title": "Medium",
-          "description": "Pixel width for the medium breakpoint, e.g. tablet devices",
+          "title": "Średnie",
+          "description": "Szerokość w pikselach dla punktu przerwania średniego wyświetlacza, np. urządzenia typu tablet",
           "default": 760
         },
         "large": {
           "type": "number",
-          "title": "Large",
-          "description": "Pixel width for the large breakpoint, e.g. laptop/desktop computers",
+          "title": "Duże",
+          "description": "Szerokość w pikselach dla punktu przerwania dużego wyświetlacza, np. laptopy/komputery stacjonarne",
           "default": 900
         }
       }
     },
     "_questionWeight": {
       "type": "number",
-      "title": "Default question weight",
+      "title": "Waga pytania",
       "default": 1,
       "_adapt": {
         "isSetting": true
@@ -221,7 +221,7 @@
     },
     "_drawer": {
       "type": "object",
-      "title": "Drawer animation",
+      "title": "Animacja szuflady",
       "default": {},
       "required": [
         "_showEasing",
@@ -231,7 +231,7 @@
       "properties": {
         "_showEasing": {
           "type": "string",
-          "title": "Opening easing function",
+          "title": "Funkcja łagodnego otwierania",
           "default": "easeOutQuart",
           "enum": [
             "easeInSine",
@@ -269,7 +269,7 @@
         },
         "_hideEasing": {
           "type": "string",
-          "title": "Closing easing function",
+          "title": "Funkcja łagodnego zamykania",
           "default": "easeInQuart",
           "enum": [
             "easeInSine",
@@ -307,7 +307,7 @@
         },
         "_duration": {
           "type": "number",
-          "title": "Duration",
+          "title": "Czas trwania",
           "default": 400
         }
       },
@@ -317,8 +317,8 @@
     },
     "_generateSourcemap": {
       "type": "boolean",
-      "title": "Generate source maps",
-      "description": "Allows the course JavaScript & CSS to be debugged via the browser's developer tools",
+      "title": "Generuj mapy źródłowe",
+      "description": "Umożliwia debugowanie JavaScript i CSS kursu za pomocą narzędzi deweloperskich przeglądarki",
       "default": false,
       "_adapt": {
         "isSetting": true
@@ -326,8 +326,8 @@
     },
     "_forceRouteLocking": {
       "type": "boolean",
-      "title": "Enforce route locking",
-      "description": "If locking is enabled, this setting prevents navigating to locked routes",
+      "title": "Wymuś blokadę trasy",
+      "description": "Jeśli blokada jest włączona, ustawienie to uniemożliwia nawigację do zablokowanych tras.",
       "default": true,
       "_adapt": {
         "isSetting": true
@@ -335,8 +335,8 @@
     },
     "_disableAnimationFor": {
       "type": "array",
-      "title": "Disable animation on selectors",
-      "description": "Allows you to disable some animations (e.g. the drawer close animation) on platform(s) where they are not performing well, using CSS selectors to target the relevant platform(s) via the classes on the HTML element",
+      "title": "Wyłącz animacje dla selektorów",
+      "description": "Umożliwia wyłączenie niektórych animacji (np. animacji zamykania szuflady) na platformach, na których nie działają one dobrze, używając selektorów CSS, aby dopasować się do odpowiedniej platformy (platform) poprzez klasy elementu HTML.",
       "default": [],
       "_adapt": {
         "isSetting": true
@@ -345,17 +345,17 @@
     },
     "_logging": {
       "type": "object",
-      "title": "Logging",
+      "title": "Logowanie",
       "default": {},
       "properties": {
         "_isEnabled": {
           "type": "boolean",
-          "title": "Enable logging",
+          "title": "Włącz logowanie",
           "default": true
         },
         "_level": {
           "type": "string",
-          "title": "Log level",
+          "title": "Poziom logowania",
           "default": "info",
           "enum": [
             "debug",
@@ -368,43 +368,43 @@
         },
         "_console": {
           "type": "boolean",
-          "title": "Log to browser console",
+          "title": "Loguj w konsoli przeglądarki",
           "default": true
         },
         "_warnFirstOnly": {
           "type": "boolean",
-          "title": "Suppress subsequent deprecation warnings",
+          "title": "Wyeliminuj kolejne ostrzeżenia o deprecjacji",
           "default": true
         }
       }
     },
     "_scrollingContainer": {
       "type": "object",
-      "title": "Inline frame support",
+      "title": "Obsługa ramek wbudowanych",
       "default": {},
       "properties": {
         "_isEnabled": {
           "type": "boolean",
-          "title": "Enable fixes",
+          "title": "Włącz",
           "default": true
         },
         "_limitToSelector": {
           "type": "string",
-          "title": "Limit to selector",
-          "description": "CSS selector to match against the HTML element when determining whether this should be active or not",
+          "title": "Ograniczenie do selektora",
+          "description": "Selektor CSS do dopasowania do elementu HTML podczas określania, czy ma on być aktywny czy nie.",
           "default": ""
         }
       }
     },
     "themeSettings": {
       "type": "object",
-      "title": "Theme settings",
+      "title": "Ustawienia motywu",
       "default": {}
     },
     "_themePreset": {
       "type": "string",
       "isObjectId": true,
-      "title": "Theme preset"
+      "title": "Wstępne ustawienia motywu"
     }
   }
 }

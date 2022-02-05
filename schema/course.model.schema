@@ -29,7 +29,7 @@
       "default": "Tytuł nowego kursu",
       "inputType": "DisplayTitle",
       "validators": [],
-      "help": "Jest to tytuł, który będzie wyświetlany w menu głównym kursu",
+      "help": "Tytuł, który będzie wyświetlany w głównym menu kursu",
       "translatable": true
     },
     "subtitle": {
@@ -38,7 +38,7 @@
       "default": "",
       "inputType": "Text",
       "validators": [],
-      "help": "To jest napis, który będzie wyświetlany w menu głównym kursu",
+      "help": "Napis, który będzie wyświetlany w głównym menu kursu",
       "translatable": true
     },
     "description": {
@@ -48,7 +48,7 @@
       "inputType": "Text",
       "validators": [],
       "translatable": true,
-      "help": "Zostanie to dodane do metadanych pliku manifestu kursu. Nie jest on (obecnie) wyświetlany nigdzie w obrębie kursu."
+      "help": "Tekst zostanie dodany do metadanych pliku manifestu kursu. Nie jest on (obecnie) wyświetlany nigdzie w obrębie kursu."
     },
     "body": {
       "type": "string",
@@ -69,11 +69,11 @@
     "_htmlClasses": {
       "type": "string",
       "required": false,
-      "title": "Klasy HTML",
+      "title": "Własne klasy HTML",
       "default": "",
       "inputType": "Text",
       "validators": [],
-      "help": "Jeśli jest ustawiona, ta klasa będzie zastosowana do elementu <html>, gdy wyświetlane jest menu górnego poziomu w kursie. Są one predefiniowane w motywie lub dodane w Custom CSS/Less code."
+      "help": "Jeśli są ustawione, będą zastosowane do elementu <html>, gdy wyświetlane jest menu górnego poziomu w kursie. Są one predefiniowane w motywie lub dodane w Custom CSS/Less code."
     },
     "_extensions": {
       "type": "object"
@@ -114,8 +114,8 @@
                 "editorOnly": true,
                 "inputType": "Checkbox",
                 "validators": [],
-                "title": "Pomiń, jeśli kompletne?",
-                "help": "Jeśli jest włączona, strona nie będzie wybierana jako pierwsza, jeśli była już przeglądana/ukończona"
+                "title": "Pomiń, jeśli ukończona?",
+                "help": "Jeśli włączysz, strona nie będzie wybierana jako pierwsza, jeśli była już przeglądana/ukończona"
               },
               "_className": {
                 "type": "string",
@@ -133,8 +133,8 @@
           "editorOnly": true,
           "inputType": "Checkbox",
           "validators": [],
-          "title": "Wymuś trasę",
-          "help": "Jeśli jest włączone, routing będzie wymuszał przejście do odpowiedniej strony startowej, niezależnie od adresu URL"
+          "title": "Zawsze kieruj na stronę startową",
+          "help": "Jeśli jest włączona, routing będzie wymuszał przejście do odpowiedniej strony startowej, niezależnie od adresu URL"
         },
         "_isMenuDisabled": {
           "type": "boolean",
@@ -143,7 +143,7 @@
           "inputType": "Checkbox",
           "validators": [],
           "title": "Wyłącz menu",
-          "help": "Umożliwia uniemożliwienie użytkownikowi wyświetlania menu głównego lub przechodzenia do niego."
+          "help": "Umożliwia blokowanie użytkownikowi dostępu do menu głównego lub nawigacji do niego."
         }
       }
     },
@@ -168,7 +168,7 @@
             },
             "_ariaLabels": {
               "type": "object",
-              "title": "ARIA labels",
+              "title": "Etykieta ARIA",
               "properties": {
                 "answeredIncorrectly": {
                   "type": "string",
@@ -181,7 +181,7 @@
                 "answeredCorrectly": {
                   "type": "string",
                   "title": "",
-                  "default": "Twoja odpowiedź jest niepoprawna",
+                  "default": "Twoja odpowiedź jest poprawna",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
@@ -189,7 +189,7 @@
                 "selectedAnswer": {
                   "type": "string",
                   "title": "",
-                  "default": "zaznaczone",
+                  "default": "zaznaczona",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
@@ -197,7 +197,7 @@
                 "unselectedAnswer": {
                   "type": "string",
                   "title": "",
-                  "default": "niezaznaczone",
+                  "default": "niezaznaczona",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
@@ -213,7 +213,7 @@
                 "previous": {
                   "type": "string",
                   "title": "",
-                  "default": "Wróć",
+                  "default": "Wstecz",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
@@ -269,7 +269,7 @@
                 "next": {
                   "type": "string",
                   "title": "",
-                  "default": "Następny",
+                  "default": "Dalej",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
@@ -293,7 +293,7 @@
                 "incomplete": {
                   "type": "string",
                   "title": "",
-                  "default": "Niekompletne",
+                  "default": "Nieukończone",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
@@ -325,7 +325,7 @@
                 "visited": {
                   "type": "string",
                   "title": "",
-                  "default": "Odwiedzony",
+                  "default": "Odwiedzone",
                   "inputType": "Text",
                   "required": true,
                   "translatable": true
@@ -358,7 +358,7 @@
             },
             "ariaLabel": {
               "type": "string",
-              "title": "ARIA label",
+              "title": "Etykieta ARIA",
               "default": "Wyślij",
               "inputType": "Text",
               "required": true,
@@ -412,7 +412,7 @@
             },
             "ariaLabel": {
               "type": "string",
-              "title": "ARIA label",
+              "title": "Etykieta ARIA",
               "default": "Pokaż poprawną odpowiedź",
               "inputType": "Text",
               "required": true,
@@ -439,7 +439,7 @@
             },
             "ariaLabel": {
               "type": "string",
-              "title": "ARIA label",
+              "title": "Etykieta ARIA",
               "default": "Ukryj poprawną odpowiedź",
               "inputType": "Text",
               "required": true,
@@ -466,7 +466,7 @@
             },
             "ariaLabel": {
               "type": "string",
-              "title": "ARIA label",
+              "title": "Etykieta ARIA",
               "default": "Pokaż informację zwrotną",
               "inputType": "Text",
               "required": true,
@@ -480,7 +480,7 @@
         "remainingAttemptsText": {
           "type": "string",
           "title": "Etykieta pozostałych prób",
-          "default": "pozostałe próby",
+          "default": "pozostało prób",
           "inputType": "Text",
           "required": true,
           "validators": [
@@ -501,8 +501,8 @@
         },
         "disabledAriaLabel": {
           "type": "string",
-          "title": "ARIA label wyłączenia",
-          "default": "Ten przycisk jest w tej chwili wyłączony",
+          "title": "Etykieta ARIA wyłączenia",
+          "default": "Przycisk jest teraz wyłączony",
           "inputType": "Text",
           "required": true,
           "validators": [
@@ -523,7 +523,7 @@
         "ref": "tag"
       },
       "title": "Tagi",
-      "help": "Dodaj tagi do swojego kursu wpisując jedno lub więcej słów, oddzielonych przecinkiem (,)",
+      "help": "Dodaj tagi do swojego kursu, wpisując jedno lub więcej słów, oddzielonych przecinkiem (,)",
       "editorOnly": true
     },
     "_classes": {
@@ -541,8 +541,8 @@
       "isSetting": true,
       "inputType": "Number",
       "validators": ["number"],
-      "title": "Wymóg ukończeni",
-      "help": "Liczba obiektów treści w ramach tego kursu, które uczący się musi ukończyć, aby kurs został uznany za ukończony. Wartość -1 wymaga, aby wszystkie zostały ukończone."
+      "title": "Wymóg ukończenia",
+      "help": "Liczba obiektów treści w ramach tego kursu, które student musi ukończyć, aby kurs został uznany za ukończony. Wartość -1 wymaga, aby wszystkie zostały ukończone."
     },
     "_isSelected": {
       "type": "boolean",
@@ -560,7 +560,7 @@
       "editorOnly": true,
       "inputType": "Checkbox",
       "validators": [],
-      "title": "Udostępnianie wszystkim użytkownikom",
+      "title": "Udostępnianie wszystkim",
       "help": "Określa, czy ten kurs będzie edytowalny przez wszystkich użytkowników"
     },
     "_shareWithUsers": {

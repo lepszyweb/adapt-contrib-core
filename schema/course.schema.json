@@ -11,8 +11,8 @@
         "heroImage": {
           "type": "string",
           "isObjectId": true,
-          "title": "Preview image",
-          "description": "The image that will be shown in the dashboard for this course",
+          "title": "Podgląd obrazu",
+          "description": "Obrazek, który będzie wyświetlany w dashboardzie dla tego kursu",
           "_adapt": {
             "editorOnly": true
           },
@@ -23,8 +23,8 @@
         },
         "subtitle": {
           "type": "string",
-          "title": "Subtitle",
-          "description": "This is the subtitle that will be displayed on the course's main menu",
+          "title": "Podtytuł",
+          "description": "Napis, który będzie wyświetlany w głównym menu kursu",
           "default": "",
           "_adapt": {
             "translatable": true
@@ -32,8 +32,8 @@
         },
         "description": {
           "type": "string",
-          "title": "Description",
-          "description": "This will be added to the course's manifest file metadata. It is not (currently) displayed anywhere within the course",
+          "title": "Opis",
+          "description": "Tekst zostanie dodany do metadanych pliku manifestu kursu. Nie jest on (obecnie) wyświetlany nigdzie w obrębie kursu.",
           "default": "",
           "_adapt": {
             "translatable": true
@@ -41,8 +41,8 @@
         },
         "_htmlClasses": {
           "type": "string",
-          "title": "Custom HTML classes",
-          "description": "If set, this class will be applied to the <html> element when the top-level menu in the course is displayed. These are predefined in the theme or added in Custom CSS/Less code",
+          "title": "Własne klasy HTML",
+          "description": "Jeśli są ustawione, będą zastosowane do elementu <html>, gdy wyświetlane jest menu górnego poziomu w kursie. Są one predefiniowane w motywie lub dodane w Custom CSS/Less code.",
           "default": ""
         },
         "_latestTrackingId": {
@@ -52,13 +52,13 @@
         },
         "_start": {
           "type": "object",
-          "title": "Start settings",
-          "description": "The start settings allow you to control which page is rendered when a course loads, potentially bypassing the menu",
+          "title": "Ustawienia startowe",
+          "description": "Ustawienia startowe pozwalają Ci kontrolować, która strona jest renderowana podczas ładowania kursu, potencjalnie omijając menu.",
           "default": {},
           "properties": {
             "_isEnabled": {
               "type": "boolean",
-              "title": "Route to custom start page on course load",
+              "title": "Ścieżka do własnej strony startowej przy ładowaniu kursu",
               "default": false,
               "_adapt": {
                 "editorOnly": true
@@ -66,7 +66,7 @@
             },
             "_startIds": {
               "type": "array",
-              "title": "Start pages",
+              "title": "Strony startowe",
               "items": {
                 "type": "object",
                 "properties": {
@@ -77,8 +77,8 @@
                   },
                   "_skipIfComplete": {
                     "type": "boolean",
-                    "title": "Skip page if complete",
-                    "description": "If enabled, the page will not be selected as the first page if it has been already viewed/completed",
+                    "title": "Pomiń, jeśli ukończona?",
+                    "description": "Jeśli włączysz, strona nie będzie wybierana jako pierwsza, jeśli była już przeglądana/ukończona",
                     "default": false,
                     "_adapt": {
                       "editorOnly": true
@@ -86,8 +86,8 @@
                   },
                   "_className": {
                     "type": "string",
-                    "title": "Limit to classes",
-                    "description": "Optional comma-separated list of class names which will be used to select this start page",
+                    "title": "Ograniczenie do klas",
+                    "description": "Opcjonalna, oddzielona przecinkami lista nazw klas, które będą używane do wyboru strony startowej",
                     "default": ""
                   }
                 }
@@ -95,8 +95,8 @@
             },
             "_force": {
               "type": "boolean",
-              "title": "Always route to start page",
-              "description": "If enabled, the routing will be forced to the appropriate start page, regardless of the URL",
+              "title": "Zawsze kieruj na stronę startową",
+              "description": "Jeśli jest włączona, routing będzie wymuszał przejście do odpowiedniej strony startowej, niezależnie od adresu URL",
               "default": false,
               "_adapt": {
                 "editorOnly": true
@@ -104,8 +104,8 @@
             },
             "_isMenuDisabled": {
               "type": "boolean",
-              "title": "Disable menu",
-              "description": "Allows you to prevent the user from seeing - or navigating to - the main menu",
+              "title": "Wyłącz menu",
+              "description": "Umożliwia blokowanie użytkownikowi dostępu do menu głównego lub nawigacji do niego.",
               "default": false,
               "_adapt": {
                 "editorOnly": true
@@ -115,12 +115,12 @@
         },
         "_globals": {
           "type": "object",
-          "title": "Globals",
+          "title": "Ogólne",
           "default": {},
           "properties": {
             "_accessibility": {
               "type": "object",
-              "title": "Accessibility",
+              "title": "Dostępność",
               "default": {},
               "required": [
                 "skipNavigationText"
@@ -128,173 +128,173 @@
               "properties": {
                 "skipNavigationText": {
                   "type": "string",
-                  "title": "Skip navigation label",
-                  "default": "Skip navigation",
+                  "title": "Etykieta Pomiń nawigację",
+                  "default": "Pomiń nawigację",
                   "_adapt": {
                     "translatable": true
                   }
                 },
                 "_ariaLabels": {
                   "type": "object",
-                  "title": "ARIA labels",
+                  "title": "Etykieta ARIA",
                   "default": {},
                   "properties": {
                     "answeredIncorrectly": {
                       "type": "string",
-                      "title": "Answered incorrectly",
-                      "default": "You answered incorrectly",
+                      "title": "Odpowiedź niepoprawna",
+                      "default": "Twoja odpowiedź jest niepoprawna",
                       "_adapt": {
                         "translatable": true
                       }
                     },
                     "answeredCorrectly": {
                       "type": "string",
-                      "title": "Answered correctly",
-                      "default": "You answered correctly",
+                      "title": "Odpowiedź poprawna",
+                      "default": "Twoja odpowiedź jest poprawna",
                       "_adapt": {
                         "translatable": true
                       }
                     },
                     "selectedAnswer": {
                       "type": "string",
-                      "title": "Selected answer",
-                      "default": "selected",
+                      "title": "Zaznaczona odpowiedź",
+                      "default": "zaznaczona",
                       "_adapt": {
                         "translatable": true
                       }
                     },
                     "unselectedAnswer": {
                       "type": "string",
-                      "title": "Unselected answer",
-                      "default": "not selected",
+                      "title": "Niezaznaczona odpowiedź",
+                      "default": "niezaznaczona",
                       "_adapt": {
                         "translatable": true
                       }
                     },
                     "skipNavigation": {
                       "type": "string",
-                      "title": "Skip navigation",
-                      "default": "Skip navigation",
+                      "title": "Pomiń nawigację",
+                      "default": "Pomiń nawigację",
                       "_adapt": {
                         "translatable": true
                       }
                     },
                     "previous": {
                       "type": "string",
-                      "title": "Previous",
-                      "default": "Back",
+                      "title": "Poprzednia",
+                      "default": "Wstecz",
                       "_adapt": {
                         "translatable": true
                       }
                     },
                     "navigationDrawer": {
                       "type": "string",
-                      "title": "Navigation drawer",
-                      "default": "Open course resources.",
+                      "title": "Szuflada nawigacyjna",
+                      "default": "Otwarte zasoby kursu.",
                       "_adapt": {
                         "translatable": true
                       }
                     },
                     "close": {
                       "type": "string",
-                      "title": "Close",
-                      "default": "Close",
+                      "title": "Zamknij",
+                      "default": "Zamknij",
                       "_adapt": {
                         "translatable": true
                       }
                     },
                     "closeDrawer": {
                       "type": "string",
-                      "title": "Close drawer",
-                      "default": "Close Drawer",
+                      "title": "Zamknij szufladę",
+                      "default": "Zamknij szufladę",
                       "_adapt": {
                         "translatable": true
                       }
                     },
                     "closeResources": {
                       "type": "string",
-                      "title": "Close resources",
-                      "default": "Close resources",
+                      "title": "Zamknij zasoby",
+                      "default": "Zamknij zasoby",
                       "_adapt": {
                         "translatable": true
                       }
                     },
                     "drawer": {
                       "type": "string",
-                      "title": "Drawer",
-                      "default": "Top of side drawer",
+                      "title": "Szuflada",
+                      "default": "Nagłówek szuflady bocznej",
                       "_adapt": {
                         "translatable": true
                       }
                     },
                     "closePopup": {
                       "type": "string",
-                      "title": "Close popup",
-                      "default": "Close popup",
+                      "title": "Zamknij okno",
+                      "default": "Zamknij okno",
                       "_adapt": {
                         "translatable": true
                       }
                     },
                     "next": {
                       "type": "string",
-                      "title": "Next",
-                      "default": "Next",
+                      "title": "Dalej",
+                      "default": "Dalej",
                       "_adapt": {
                         "translatable": true
                       }
                     },
                     "done": {
                       "type": "string",
-                      "title": "Done",
-                      "default": "Done",
+                      "title": "Gotowe",
+                      "default": "Gotowe",
                       "_adapt": {
                         "translatable": true
                       }
                     },
                     "complete": {
                       "type": "string",
-                      "title": "Complete",
-                      "default": "Completed",
+                      "title": "Ukończone",
+                      "default": "Ukończone",
                       "_adapt": {
                         "translatable": true
                       }
                     },
                     "incomplete": {
                       "type": "string",
-                      "title": "Incomplete",
-                      "default": "Incomplete",
+                      "title": "Nieukończone",
+                      "default": "Nieukończone",
                       "_adapt": {
                         "translatable": true
                       }
                     },
                     "incorrect": {
                       "type": "string",
-                      "title": "Incorrect",
-                      "default": "Incorrect",
+                      "title": "Niepoprawne",
+                      "default": "Niepoprawne",
                       "_adapt": {
                         "translatable": true
                       }
                     },
                     "correct": {
                       "type": "string",
-                      "title": "Correct",
-                      "default": "Correct",
+                      "title": "Poprawne",
+                      "default": "Poprawne",
                       "_adapt": {
                         "translatable": true
                       }
                     },
                     "locked": {
                       "type": "string",
-                      "title": "Locked",
-                      "default": "Locked",
+                      "title": "Zablokowane",
+                      "default": "Zablokowane",
                       "_adapt": {
                         "translatable": true
                       }
                     },
                     "visited": {
                       "type": "string",
-                      "title": "Visited",
-                      "default": "Visited",
+                      "title": "Odwiedzone",
+                      "default": "Odwiedzone",
                       "_adapt": {
                         "translatable": true
                       }
@@ -307,7 +307,7 @@
         },
         "_buttons": {
           "type": "object",
-          "title": "Buttons",
+          "title": "Przyciski",
           "default": {},
           "required": [
             "remainingAttemptsText",
@@ -317,7 +317,7 @@
           "properties": {
             "_submit": {
               "type": "object",
-              "title": "Submit",
+              "title": "Wyślij",
               "default": {},
               "required": [
                 "buttonText",
@@ -326,16 +326,16 @@
               "properties": {
                 "buttonText": {
                   "type": "string",
-                  "title": "Button text",
-                  "default": "Submit",
+                  "title": "Tekst na przycisku",
+                  "default": "Wyślij",
                   "_adapt": {
                     "translatable": true
                   }
                 },
                 "ariaLabel": {
                   "type": "string",
-                  "title": "ARIA label",
-                  "default": "Submit",
+                  "title": "Etykieta ARIA",
+                  "default": "Wyślij",
                   "_adapt": {
                     "translatable": true
                   }
@@ -344,7 +344,7 @@
             },
             "_reset": {
               "type": "object",
-              "title": "Reset",
+              "title": "Wyczyść",
               "default": {},
               "required": [
                 "buttonText",
@@ -353,16 +353,16 @@
               "properties": {
                 "buttonText": {
                   "type": "string",
-                  "title": "Button text",
-                  "default": "Reset",
+                  "title": "Tekst na przycisku",
+                  "default": "Wyczyść",
                   "_adapt": {
                     "translatable": true
                   }
                 },
                 "ariaLabel": {
                   "type": "string",
-                  "title": "ARIA label",
-                  "default": "Reset",
+                  "title": "Etykieta ARIA",
+                  "default": "Wyczyść",
                   "_adapt": {
                     "translatable": true
                   }
@@ -371,7 +371,7 @@
             },
             "_showCorrectAnswer": {
               "type": "object",
-              "title": "Show correct answer",
+              "title": "Pokaż poprawną odpowiedź",
               "default": {},
               "required": [
                 "buttonText",
@@ -380,16 +380,16 @@
               "properties": {
                 "buttonText": {
                   "type": "string",
-                  "title": "Button text",
-                  "default": "Show correct answer",
+                  "title": "Tekst na przycisku",
+                  "default": "Pokaż poprawną odpowiedź",
                   "_adapt": {
                     "translatable": true
                   }
                 },
                 "ariaLabel": {
                   "type": "string",
-                  "title": "ARIA label",
-                  "default": "Show correct answer",
+                  "title": "Etykieta ARIA",
+                  "default": "Pokaż poprawną odpowiedź",
                   "_adapt": {
                     "translatable": true
                   }
@@ -398,7 +398,7 @@
             },
             "_hideCorrectAnswer": {
               "type": "object",
-              "title": "Hide correct answer",
+              "title": "Ukryj poprawną odpowiedź",
               "default": {},
               "required": [
                 "buttonText",
@@ -407,16 +407,16 @@
               "properties": {
                 "buttonText": {
                   "type": "string",
-                  "title": "Button text",
-                  "default": "Show your answer",
+                  "title": "Tekst na przycisku",
+                  "default": "Ukryj poprawną odpowiedź",
                   "_adapt": {
                     "translatable": true
                   }
                 },
                 "ariaLabel": {
                   "type": "string",
-                  "title": "ARIA label",
-                  "default": "Show your answer",
+                  "title": "Etykieta ARIA",
+                  "default": "Ukryj poprawną odpowiedź",
                   "_adapt": {
                     "translatable": true
                   }
@@ -425,7 +425,7 @@
             },
             "_showFeedback": {
               "type": "object",
-              "title": "Show feedback",
+              "title": "Pokaż informację zwrotną",
               "default": {},
               "required": [
                 "buttonText",
@@ -434,16 +434,16 @@
               "properties": {
                 "buttonText": {
                   "type": "string",
-                  "title": "Button text",
-                  "default": "Show feedback",
+                  "title": "Tekst na przycisku",
+                  "default": "Pokaż informację zwrotną",
                   "_adapt": {
                     "translatable": true
                   }
                 },
                 "ariaLabel": {
                   "type": "string",
-                  "title": "ARIA label",
-                  "default": "Show feedback",
+                  "title": "Etykieta ARIA",
+                  "default": "Pokaż informację zwrotną",
                   "_adapt": {
                     "translatable": true
                   }
@@ -452,24 +452,24 @@
             },
             "remainingAttemptsText": {
               "type": "string",
-              "title": "Remaining attempts label",
-              "default": "attempts remaining",
+              "title": "Etykieta pozostałych prób",
+              "default": "pozostało prób",
               "_adapt": {
                 "translatable": true
               }
             },
             "remainingAttemptText": {
               "type": "string",
-              "title": "Final attempt label",
-              "default": "final attempt",
+              "title": "Etykieta ostatniej próby",
+              "default": "Ostatnia próba",
               "_adapt": {
                 "translatable": true
               }
             },
             "disabledAriaLabel": {
               "type": "string",
-              "title": "Disabled ARIA label",
-              "default": "This button is disabled at the moment",
+              "title": "Etykieta ARIA wyłączenia",
+              "default": "Przycisk jest teraz wyłączony",
               "_adapt": {
                 "translatable": true
               }
@@ -481,8 +481,8 @@
         },
         "tags": {
           "type": "array",
-          "title": "Tags",
-          "description": "Add tags to your course by entering one or more words, separated with a comma (,)",
+          "title": "Tagi",
+          "description": "Dodaj tagi do swojego kursu, wpisując jedno lub więcej słów, oddzielonych przecinkiem (,)",
           "items": {
             "type": "string",
             "isObjectId": true
@@ -494,8 +494,8 @@
         },
         "_requireCompletionOf": {
           "type": "number",
-          "title": "Number of pages/submenus required for completion",
-          "description": "The number of content objects within this course the learner must complete in order for this course to be set as completed. A value of -1 requires all of them to be completed",
+          "title": "Liczba stron/podmenu wymaganych do ukończenia",
+          "description": "Liczba obiektów treści w ramach tego kursu, które student musi ukończyć, aby kurs został uznany za ukończony. Wartość -1 wymaga, aby wszystkie zostały ukończone.",
           "default": -1,
           "_adapt": {
             "isSetting": true
@@ -503,7 +503,7 @@
         },
         "_isSelected": {
           "type": "boolean",
-          "title": "Is selected",
+          "title": "Jest wybrane",
           "default": false,
           "_adapt": {
             "editorOnly": true
@@ -511,7 +511,7 @@
         },
         "_hasPreview": {
           "type": "boolean",
-          "title": "Has preview",
+          "title": "Ma podgląd",
           "default": false,
           "_adapt": {
             "editorOnly": true
@@ -519,8 +519,8 @@
         },
         "_isShared": {
           "type": "boolean",
-          "title": "Share with all users",
-          "description": "Defines whether this course will be editable by all users",
+          "title": "Udostępnij wszystkim",
+          "description": "Określa, czy ten kurs będzie edytowalny przez wszystkich użytkowników",
           "default": false,
           "_adapt": {
             "editorOnly": true
@@ -528,28 +528,28 @@
         },
         "_shareWithUsers": {
           "type": "array",
-          "title": "Share with specific users",
-          "description": "Defines which individual users are able to edit this course",
+          "title": "Udostępniaj określonym użytkownikom",
+          "description": "Określa, którzy użytkownicy mogą edytować ten kurs",
           "items": {
             "type": "string",
             "isObjectId": true
           },
-          "_backboneForms": "Users"
+          "_backboneForms": "Użytkownicy"
         },
         "themeVariables": {
           "type": "object",
-          "title": "Theme variables",
+          "title": "Zmienne motywu",
           "default": {}
         },
         "menuSettings": {
           "type": "object",
-          "title": "Menu settings",
+          "title": "Ustawienia menu",
           "default": {}
         },
         "_lockType": {
           "type": "string",
-          "title": "Menu lock type",
-          "description": "Defines which (if any) locking mechanism will be used for menu items",
+          "title": "Typ blokady menu",
+          "description": "Określa, który (jeśli w ogóle) mechanizm blokowania będzie używany dla pozycji menu",
           "default": "",
           "enum": [
             "",
@@ -562,8 +562,8 @@
         },
         "customStyle": {
           "type": "string",
-          "title": "Custom CSS/Less code",
-          "description": "Add any custom CSS or valid Less code here",
+          "title": "Własny kod CSS/LESS",
+          "description": "Dodaj tutaj dowolny własny kod CSS lub poprawny kod LESS",
           "default": "",
           "_backboneForms": {
             "type": "CodeEditor",
@@ -572,7 +572,7 @@
         },
         "externalReferences": {
           "type": "object",
-          "title": "External references",
+          "title": "Zasoby zewnętrzne",
           "default": {}
         }
       }
